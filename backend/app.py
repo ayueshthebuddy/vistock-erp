@@ -9,21 +9,12 @@ def get_db():
         user=os.environ.get("MYSQLUSER"),
         password=os.environ.get("MYSQLPASSWORD"),
         database=os.environ.get("MYSQLDATABASE"),
-        port=os.environ.get("MYSQLPORT"),
+        port=int(os.environ.get("MYSQLPORT")),
         autocommit=True
     )
 
 app = Flask(__name__)
 CORS(app)
-
-def get_db():
-    return mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="root123",
-        database="vistock",
-        autocommit=True
-    )
 
 @app.route("/products", methods=["GET"])
 def get_products():

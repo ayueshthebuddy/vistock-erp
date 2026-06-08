@@ -7,7 +7,7 @@ function Admin() {
 
   const fetchSales = async () => {
     try {
-      const response = await axios.get("http://127.0.0.1:5000/admin-sales");
+      const response = await axios.get("https://vistock-erp-production.up.railway.app/admin-sales");
       setSales(response.data);
     } catch (error) {
       console.log(error);
@@ -16,7 +16,7 @@ function Admin() {
 
   const fetchParties = async () => {
     try {
-      const response = await axios.get("http://127.0.0.1:5000/parties");
+      const response = await axios.get("https://vistock-erp-production.up.railway.app/parties");
       setParties(response.data);
     } catch (error) {
       console.log(error);
@@ -25,7 +25,7 @@ function Admin() {
 
   const updateLimit = async (party) => {
     try {
-      await axios.post("http://127.0.0.1:5000/update-limit", {
+      await axios.post("https://vistock-erp-production.up.railway.app/update-limit", {
         party_name: party.party_name,
         credit_limit: party.credit_limit,
       });

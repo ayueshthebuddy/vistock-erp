@@ -76,7 +76,7 @@ const handleChange = (e) => {
     try {
 
       const response = await axios.post(
-        "http://127.0.0.1:5000/sales",
+        "https://vistock-erp-production.up.railway.app/sales",
         formData
       );
 

@@ -17,7 +17,7 @@ function Dashboard() {
     try {
 
       const response = await axios.get(
-        "http://127.0.0.1:5000/dashboard"
+        "https://vistock-erp-production.up.railway.app/dashboard"
       );
 
       setData(response.data);

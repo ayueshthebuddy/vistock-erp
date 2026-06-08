@@ -7,7 +7,7 @@ function Stock() {
   const fetchProducts = async () => {
     try {
       const response = await axios.get(
-        "http://127.0.0.1:5000/products"
+        "https://vistock-erp-production.up.railway.app/products"
       );
 
       setProducts(response.data);
